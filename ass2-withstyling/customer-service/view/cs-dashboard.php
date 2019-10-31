@@ -54,14 +54,17 @@ if (isset($_SESSION["orders"])) {
     <?php
     if (isset($orders)) {
         include('partials/orderList.php');
-    };
-
-    include('partials/enqBox.php');
-    
+    };    
 
     ?>
 </div>
-<div class="col-lg-2"></div>
+<div class="col-lg-2">
+</div>
+</div>
+<div class=row>
+    <div class="enqbox">
+        <?php include('partials/enqbox.php') ?>
+    </div>
 </div>
 </div>
 </body>

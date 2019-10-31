@@ -4,12 +4,13 @@ require_once("../../application-context/guards/userGuard.php");
 
 
 $orderDetails = $_SESSION["orderDetails"];
+$principle = $_SESSION["principle"];
 ?>
 
 <html>
 
 <head>
-    <title>Customer Service Dashboard</title>
+    <title>Order Detail</title>
       <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- load bootstrap -->
@@ -31,6 +32,15 @@ $orderDetails = $_SESSION["orderDetails"];
     <div class="row">
         <div class="col-lg-12">
         <h2>Order : <?php echo $orderDetails[0]["Order_id"]?></h2>
+        <?php
+            if ($principle['role'] == 'CSR') {
+                ?>
+                <div>
+                    <a class="btn btn-primary" href=#>Refund this order</a>
+                </div>
+            <?php
+            };
+            ?>
         </div>
     </div>
     <div class="row">
@@ -75,7 +85,6 @@ $orderDetails = $_SESSION["orderDetails"];
         </tr>
     </tbody>
     <?php }; ?>
-
     </div>
     </div>
     </div>
