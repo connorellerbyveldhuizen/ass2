@@ -35,9 +35,9 @@ $enqTypeList = $_SESSION["enqTypeList"];
 <h1>Lodge Enquiry</h1>
 <form class="cf" action="../actions/enquiry/actSuccessEnquiry.php" method="POST">
   <div class="half left cf">
-    <input class="form-control" type="text" id="orderId" name="orderId" value="Order ID: <?php echo $orderDetails[0]["Order_id"] ?>" readonly>
-    <input class="form-control" type="text" id="input-name" placeholder="Name">
-    <input class="form-control" type="email" id="input-email" placeholder="Email address">
+    <label for="orderId">Order ID:</label>
+    <input class="form-control" type="text" id="orderId" name="orderId" value="<?php echo $orderDetails[0]["Order_id"] ?>" readonly>
+    <input class="form-control" type="text" name="title" placeholder="Title">
     <select class="form-control" name="enqType">
                     <?php
                         foreach($enqTypeList as $enqType) {

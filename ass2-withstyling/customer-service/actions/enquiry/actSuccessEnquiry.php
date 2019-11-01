@@ -16,8 +16,6 @@ $enqTypeId = $enquiryFormData["enqType"];
 
 $enquiry = newCustomerEnquiry($orderId, $enqTitle, $enqMsg, $enqTypeId);
 
-if ($enquiry) {
-    echo "Success";
-}
-// header("Location: ../../view/cs-lodge-enquiry.php");
+
+header("Location: ../../view/cs-success-enquiry.php");
 ?>

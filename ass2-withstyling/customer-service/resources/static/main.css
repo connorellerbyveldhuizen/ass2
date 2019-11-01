@@ -227,3 +227,7 @@ form {
 .enqbox {
   text-align:right;
 }
+
+#success-enquiry {
+  text-align: center;
+}
